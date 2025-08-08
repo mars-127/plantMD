@@ -1,6 +1,6 @@
 # 🌿 Plant Medicinal Identifier 💊
 
-A web application that identifies plants using your camera and displays their medicinal properties, powered by TensorFlow.js and Google Teachable Machine.
+A light weight web application that identifies plants using your camera and displays their medicinal properties, powered by TensorFlow.js and Google Teachable Machine cloud model. 
 
 <img width="891" height="702" alt="User Interface" src="https://github.com/user-attachments/assets/2b7d4267-b686-4e06-ac28-57eb639a04d3" />
 
