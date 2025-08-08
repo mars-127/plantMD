@@ -66,7 +66,7 @@ open index.html  # Or just double-click the file
 
 # File Structure
 plant-identifier/ \
-├── index.html          # Main application\
+├── plantmedindex.html          # Main application\
 ├── script.js           # Core functionality\
 ├── styles.css          # Custom styling\
 └── model/              # Teachable Machine model files\
