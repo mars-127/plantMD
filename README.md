@@ -27,6 +27,8 @@ A web application that identifies plants using your camera and displays their me
 <img width="741" height="853" alt="USe Case_Fixed" src="https://github.com/user-attachments/assets/3bdbd5ef-d24c-4946-9acc-0a56db80fe68" />
 </p>
 <br>
+🚀 No backend/server required <br>
+🔗 Uses Teachable Machine's hosted model
 
 ## Supported Plants
 1. Mango Tree
@@ -38,53 +40,37 @@ A web application that identifies plants using your camera and displays their me
 7. Banyan Tree
 8. Oleander *(toxic - red warning)*
 
-## Technologies Used
-- TensorFlow.js
-- Teachable Machine Image Model
-- HTML5/CSS3
-- JavaScript (ES6)
+## How to Use
+1. **Download** `plantmedindex.html`
+2. **Open it** in Chrome/Firefox
+3. **Allow camera access** when prompted
 
-## Setup Instructions
+## No Setup Required!
+The app automatically loads:
+- TensorFlow.js from CDN
+- Teachable Machine library from CDN
+- Your trained model from Google's servers
 
-### 1. Prerequisites
-- Modern browser (Chrome/Firefox recommended)
-- Webcam access
-- Internet connection (for model loading)
-
-### 2. Quick Start
-1. Clone the repository
-[git clone] ([url](https://github.com/mars-127/plantMD.git))
-2. Open index.html in browser
-open index.html  # Or just double-click the file
-
-### 3. Using Your Own Model
-1. Train your model at [Teachable Machine]([url](https://teachablemachine.withgoogle.com/train/image))
-2. Export as "TensorFlow.js" model
-3. Replace in script.js:
-> const modelURL = "YOUR_MODEL_URL/model.json";
-> const metadataURL = "YOUR_MODEL_URL/metadata.json";
-
-# File Structure
-plant-identifier/ \
-├── plantmedindex.html          # Main application\
-├── script.js           # Core functionality\
-├── styles.css          # Custom styling\
-└── model/              # Teachable Machine model files\
-    ├── model.json\
-    ├── metadata.json\
-    └── weights.bin\
+## For Custom Models
+1. Train at [Teachable Machine](https://teachablemachine.withgoogle.com/)
+2. Export as "TensorFlow.js (cloud)"
+3. Replace this line in `plantmedindex.html`:
+```html
+<script>
+  const modelURL = "https://teachablemachine.withgoogle.com/models/YOUR_MODEL_ID/";
+</script>
+```
 
 # Troubleshooting
 ### Issue	Solution
-1. Camera not starting	Allow camera permissions in browser
-2. "tmImage not defined"	Check internet connection and CDN links
-3. Low accuracy	Retrain model with more images
-4. Blank predictions	Ensure proper lighting and focus
+1. Camera not starting:	Allow camera permissions in browser
+2. "tmImage not defined":	Check internet connection and CDN links
+3. Low accuracy:	Retrain model with more images
+4. Blank predictions:	Ensure proper lighting and focus
 
 # Future Enhancements
 - [ ] Add more plant species
 - [ ] Mobile app version
-- [ ] Offline capability
 - [ ] Multi-language support
 
 ---
